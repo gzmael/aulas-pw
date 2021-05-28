@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Switch - JavaScript</title>
+  </head>
+  <body>
+    <h1>Switch</h1>
+
+    <h4>Aplicativo de Reserva de Quarto</h4>
+    <form action="">
+      <input type="number" placeholder="Tipo do Quarto" id="tipo" />
+      <input
+        type="number"
+        placeholder="Quantidade de Quartos"
+        step="1"
+        min="1"
+        id="quantidade"
+      />
+      <button type="button" onclick="calculaPreco()">Consultar Preço</button>
+    </form>
+
+    <script>
+      /* const botao = document.querySelector("button");
+
+      botao.addEventListener("click", calculaPreco); */
+
+      function calculaPreco() {
+        const tipo = Number(document.getElementById("tipo").value);
+        const quantidade = Number(document.getElementById("quantidade").value);
+        let preco = 0;
+        let total = 0;
+
+        switch (tipo) {
+          case 1:
+            preco = 100;
+            break;
+
+          case 2:
+            preco = 150;
+            break;
+
+          case 3:
+            preco = 200;
+            break;
+
+          case 4:
+            preco = 400;
+            break;
+
+          default:
+            alert("Tipo de quarto inválido!");
+        }
+
+        if (total !== 0) {
+          total = preco * quantidade;
+
+          alert(`O valor total da reserva é: R$ ${total}`);
+        }
+      }
+
+      /* const opcao = Number(prompt("Insira o tipo de Quarto: [1,2,3,4]"));
+
+       */
+    </script>
+  </body>
+</html>
